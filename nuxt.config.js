@@ -16,7 +16,16 @@ export default {
     ]
   },
 
- 
+  generate: {
+    routes: ['/login'] 
+  }
+,
+routerModule:{
+  routes: ['/login'] 
+},
+ router:{
+  middleware: "router",
+ },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -27,6 +36,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/router'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

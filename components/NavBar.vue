@@ -283,17 +283,14 @@
                     />
                   </a>
                 </li>
-                <a >
-                  <li class="menu-list-item">
-                    <a @click="goToLoginPage" class="menu-link">
-                      <img
-                        loading="lazy"
-                        class="icon-favorite-svg"
-                        src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/user.svg"         
-                          height="24px"         />
-                    </a>
-                  </li>
-                </a>
+                <a href="/LoginPage" class="menu-link">
+                    <img
+                      loading="lazy"
+                      class="icon-favorite-svg"
+                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/user.svg"
+                      height="24px"
+                    />
+                  </a>
                 <li class="menu-list-item">
                   <a href="/favorites" class="menu-link">
                     <img
@@ -369,7 +366,7 @@
         }, 500); 
       },
       goToLoginPage() {
-        this.$router.push('/LoginPage');
+        this.$router.push('/login');
       },
     },
   };
