@@ -13,5 +13,9 @@
     "nuxt": "^3.9.0",
     "vue": "^3.4.0",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "vite": "^5.0.10",
+    "vue-slick-carousel": "^1.0.6"
   }
 }
