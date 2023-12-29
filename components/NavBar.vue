@@ -10,8 +10,7 @@
               <a href="/" class="logo">
                 <button
                   loading="lazy"
-                  src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/10/31/137ac835-153e-4420-93a0-23b04851c260.svg"
-                  alt="Super Step"
+                  src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/10/31/137ac835-153e-4420-93a0-23b04851c260.svg"                  alt="Super Step"
                   width="200"
                 />
               </a>
@@ -20,21 +19,251 @@
               <div class="header-center">
                 <nav class="navigation">
                   <ul class="menu-list">
-                    <li class="menu-list-item">
-                      <a href="https://www.superstep.com.tr/markalar-landing" class="menu-link">Markalar</a>
-                    </li>
-                    <li class="menu-list-item">
-                      <a href="https://www.superstep.com.tr/tum-erkek/" class="menu-link">Erkek</a>
-                    </li>
-                    <li class="menu-list-item">
-                      <a href="https://www.superstep.com.tr/tum-kadin/" class="menu-link">Kadın</a>
-                    </li>
-                    <li class="menu-list-item">
-                      <a href="https://www.superstep.com.tr/tum-cocuk-urunleri/" class="menu-link">Çocuk</a>
-                    </li>
-                    <li class="menu-list-item">
-                      <a href="https://www.superstep.com.tr/tum-giyim-urunleri/" class="menu-link">Giyim</a>
-                    </li>
+                    <li class="menu-list-item" @mouseover="showDropdown('markalar')" @mouseleave="hideDropdown('markalar')">
+                        <a href="https://www.superstep.com.tr/markalar-landing" class="menu-link">Markalar</a>
+                        <div v-show="isDropdownVisible.markalar" class="dropdown">
+                          <div class="dropdown-column">
+                            <h3>Tüm Markalar</h3>
+                            <ul>
+                                <li><a href="#">adidas </a></li>
+                                <li><a href="#">nike</a></li>
+                                <li><a href="#">Vans</a></li>
+                                <li><a href="#">skechers</a></li>
+                                <li><a href="#">new balance</a></li>
+                                <li><a href="#">timberland</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3></h3>
+                            <ul>
+                                <li><a href="#">adidas </a></li>
+                                <li><a href="#">nike</a></li>
+                                <li><a href="#">Vans</a></li>
+                                <li><a href="#">skechers</a></li>
+                                <li><a href="#">new balance</a></li>
+                                <li><a href="#">timberland</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3></h3>
+                            <ul>
+                                <li><a href="#">adidas </a></li>
+                                <li><a href="#">nike</a></li>
+                                <li><a href="#">Vans</a></li>
+                                <li><a href="#">skechers</a></li>
+                                <li><a href="#">new balance</a></li>
+                                <li><a href="#">timberland</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3></h3>
+                            <ul>
+                              <li><a href="#">adidas </a></li>
+                              <li><a href="#">nike</a></li>
+                              <li><a href="#">Vans</a></li>
+                              <li><a href="#">skechers</a></li>
+                              <li><a href="#">new balance</a></li>
+                              <li><a href="#">timberland</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="menu-list-item" @mouseover="showDropdown('erkek')" @mouseleave="hideDropdown('erkek')">
+                        <a href="https://www.superstep.com.tr/markalar-landing" class="menu-link">ERKEK</a>
+                        <div v-show="isDropdownVisible.erkek" class="dropdown">
+                          <div class="dropdown-column">
+                            <h3>Ayakkabı</h3>
+                            <ul>
+                              <li><a href="#">Ayakkabı 1</a></li>
+                              <li><a href="#">Ayakkabı 2</a></li>
+                              <li><a href="#">Ayakkabı 3</a></li>
+                              <li><a href="#">Ayakkabı 4</a></li>
+                              <li><a href="#">Ayakkabı 5</a></li>
+                              <li><a href="#">Ayakkabı 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Giyim</h3>
+                            <ul>
+                              <li><a href="#">Giyim 1</a></li>
+                              <li><a href="#">Giyim 2</a></li>
+                              <li><a href="#">Giyim 3</a></li>
+                              <li><a href="#">Giyim 4</a></li>
+                              <li><a href="#">Giyim 5</a></li>
+                              <li><a href="#">Giyim 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Aksesuar</h3>
+                            <ul>
+                              <li><a href="#">Aksesuar 1</a></li>
+                              <li><a href="#">Aksesuar 2</a></li>
+                              <li><a href="#">Aksesuar 3</a></li>
+                              <li><a href="#">Aksesuar 4</a></li>
+                              <li><a href="#">Aksesuar 5</a></li>
+                              <li><a href="#">Aksesuar 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Markalar</h3>
+                            <ul>
+                              <li><a href="#">Marka 1</a></li>
+                              <li><a href="#">Marka 2</a></li>
+                              <li><a href="#">Marka 3</a></li>
+                              <li><a href="#">Marka 4</a></li>
+                              <li><a href="#">Marka 5</a></li>
+                              <li><a href="#">Marka 6</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="menu-list-item" @mouseover="showDropdown('kadin')" @mouseleave="hideDropdown('kadin')">
+                        <a href="https://www.superstep.com.tr/markalar-landing" class="menu-link">KADIN</a>
+                        <div v-show="isDropdownVisible.kadin" class="dropdown">
+                          <div class="dropdown-column">
+                            <h3>Ayakkabı</h3>
+                            <ul>
+                              <li><a href="#">Ayakkabı 1</a></li>
+                              <li><a href="#">Ayakkabı 2</a></li>
+                              <li><a href="#">Ayakkabı 3</a></li>
+                              <li><a href="#">Ayakkabı 4</a></li>
+                              <li><a href="#">Ayakkabı 5</a></li>
+                              <li><a href="#">Ayakkabı 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Giyim</h3>
+                            <ul>
+                              <li><a href="#">Giyim 1</a></li>
+                              <li><a href="#">Giyim 2</a></li>
+                              <li><a href="#">Giyim 3</a></li>
+                              <li><a href="#">Giyim 4</a></li>
+                              <li><a href="#">Giyim 5</a></li>
+                              <li><a href="#">Giyim 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Aksesuar</h3>
+                            <ul>
+                              <li><a href="#">Aksesuar 1</a></li>
+                              <li><a href="#">Aksesuar 2</a></li>
+                              <li><a href="#">Aksesuar 3</a></li>
+                              <li><a href="#">Aksesuar 4</a></li>
+                              <li><a href="#">Aksesuar 5</a></li>
+                              <li><a href="#">Aksesuar 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Markalar</h3>
+                            <ul>
+                              <li><a href="#">Marka 1</a></li>
+                              <li><a href="#">Marka 2</a></li>
+                              <li><a href="#">Marka 3</a></li>
+                              <li><a href="#">Marka 4</a></li>
+                              <li><a href="#">Marka 5</a></li>
+                              <li><a href="#">Marka 6</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="menu-list-item" @mouseover="showDropdown('cocuk')" @mouseleave="hideDropdown('cocuk')">
+                        <a href="https://www.superstep.com.tr/markalar-landing" class="menu-link">ÇOCUK</a>
+                        <div v-show="isDropdownVisible.cocuk" class="dropdown">
+                          <div class="dropdown-column">
+                            <h3>Ayakkabı</h3>
+                            <ul>
+                              <li><a href="#">Ayakkabı 1</a></li>
+                              <li><a href="#">Ayakkabı 2</a></li>
+                              <li><a href="#">Ayakkabı 3</a></li>
+                              <li><a href="#">Ayakkabı 4</a></li>
+                              <li><a href="#">Ayakkabı 5</a></li>
+                              <li><a href="#">Ayakkabı 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Giyim</h3>
+                            <ul>
+                              <li><a href="#">Giyim 1</a></li>
+                              <li><a href="#">Giyim 2</a></li>
+                              <li><a href="#">Giyim 3</a></li>
+                              <li><a href="#">Giyim 4</a></li>
+                              <li><a href="#">Giyim 5</a></li>
+                              <li><a href="#">Giyim 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Aksesuar</h3>
+                            <ul>
+                              <li><a href="#">Aksesuar 1</a></li>
+                              <li><a href="#">Aksesuar 2</a></li>
+                              <li><a href="#">Aksesuar 3</a></li>
+                              <li><a href="#">Aksesuar 4</a></li>
+                              <li><a href="#">Aksesuar 5</a></li>
+                              <li><a href="#">Aksesuar 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Markalar</h3>
+                            <ul>
+                              <li><a href="#">Marka 1</a></li>
+                              <li><a href="#">Marka 2</a></li>
+                              <li><a href="#">Marka 3</a></li>
+                              <li><a href="#">Marka 4</a></li>
+                              <li><a href="#">Marka 5</a></li>
+                              <li><a href="#">Marka 6</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="menu-list-item" @mouseover="showDropdown('giyim')" @mouseleave="hideDropdown('giyim')">
+                        <a href="https://www.superstep.com.tr/markalar-landing" class="menu-link">GİYİM</a>
+                        <div v-show="isDropdownVisible.giyim" class="dropdown">
+                          <div class="dropdown-column">
+                            <h3>Ayakkabı</h3>
+                            <ul>
+                              <li><a href="#">Ayakkabı 1</a></li>
+                              <li><a href="#">Ayakkabı 2</a></li>
+                              <li><a href="#">Ayakkabı 3</a></li>
+                              <li><a href="#">Ayakkabı 4</a></li>
+                              <li><a href="#">Ayakkabı 5</a></li>
+                              <li><a href="#">Ayakkabı 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Giyim</h3>
+                            <ul>
+                              <li><a href="#">Giyim 1</a></li>
+                              <li><a href="#">Giyim 2</a></li>
+                              <li><a href="#">Giyim 3</a></li>
+                              <li><a href="#">Giyim 4</a></li>
+                              <li><a href="#">Giyim 5</a></li>
+                              <li><a href="#">Giyim 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Aksesuar</h3>
+                            <ul>
+                              <li><a href="#">Aksesuar 1</a></li>
+                              <li><a href="#">Aksesuar 2</a></li>
+                              <li><a href="#">Aksesuar 3</a></li>
+                              <li><a href="#">Aksesuar 4</a></li>
+                              <li><a href="#">Aksesuar 5</a></li>
+                              <li><a href="#">Aksesuar 6</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-column">
+                            <h3>Markalar</h3>
+                            <ul>
+                              <li><a href="#">Marka 1</a></li>
+                              <li><a href="#">Marka 2</a></li>
+                              <li><a href="#">Marka 3</a></li>
+                              <li><a href="#">Marka 4</a></li>
+                              <li><a href="#">Marka 5</a></li>
+                              <li><a href="#">Marka 6</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
                     <li class="menu-list-item">
                       <a href="/indirim" class="menu-link" >İndirim</a>
                     </li>
@@ -107,6 +336,13 @@
         currentNotificationIndex: 0,
         slideIn: false,
         isCartMenuOpen: false,
+        isDropdownVisible:{
+            markalar: false,
+             erkek: false,
+            kadin: false,
+            cocuk: false,
+            giyim: false
+        }
       };
     },
     mounted() {
@@ -118,6 +354,12 @@
           this.showNextNotification();
         }, 3000); 
       },
+      showDropdown(menu) {
+      this.isDropdownVisible[menu] = true;
+    },
+    hideDropdown(menu) {
+      this.isDropdownVisible[menu] = false;
+    },
       showNextNotification() {
         this.slideIn = false;
         setTimeout(() => {
@@ -145,6 +387,39 @@
   }
   .menu-list-item a.menu-link[href="/indirim"] {
     color: red;
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu-list-item:hover .dropdown {
+    display: flex;
+  }
+
+  .dropdown-column {
+    flex: 1;
+  }
+
+  .dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   .sticky-header {
     position: sticky;
