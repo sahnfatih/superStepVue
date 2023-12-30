@@ -17,7 +17,7 @@
                                             value="V9vQSjfof75B2o2HMoeV0WLReBmGhi3TeUU1flqb5zBlNc1h7dy2SsYm9Otgrxp0">
                                         <div class="auth__form__input-box auth__form__input-box--register">
                                             <label class="form-label">Eposta adresiniz</label>
-                                            <input type="text" name="email"
+                                            <input type="text" name="email" 
                                                 class="auth__form__input auth__form__input--register" placeholder="">
                                         </div>
                                         <div class="error auth__form__error js-error-email" style="display: none;">
@@ -717,6 +717,10 @@
         </div>
     </div>
 </template>
+
+
+
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500&display=swap');

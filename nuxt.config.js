@@ -16,15 +16,18 @@ export default {
     ]
   },
 
+  proxy: {
+    '/cms': 'https://akn-ss.a-cdn.akinoncloud.com',
+  },
   generate: {
-    routes: ['/login'] 
-  }
-,
-routerModule:{
-  routes: ['/login'] 
-},
+    routes: [
+      '/',
+      '/login',
+    ],
+  },
  router:{
   middleware: "router",
+  base: "/",
  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

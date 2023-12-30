@@ -1,5 +1,5 @@
 <template>
-    <div>
+      <div>
         <Navbar />
         <ContainerVue />
         <Container2Vue />
@@ -9,10 +9,7 @@
         <FavoriModellerSliderVue />
         <Container3Vue />
         <FooterVue />
-        <Footer2Vue />
-        
-               
-        
+        <Footer2Vue />    
     </div>
   </template> 
   <script>
@@ -27,7 +24,7 @@
   import FavoriModellerSliderVue from '../components/FavoriModellerSlider.vue';
   import Container4Vue from '../components/Container4.vue'
   export default {
-    name: "IndexPage",
+    name: "DefaultLayout",
     components: { Navbar, SezonunTrendleriVue, ContainerVue, KoleksiyonlarVue, Container2Vue, FooterVue, Container3Vue, Footer2Vue, FavoriModellerSliderVue, Container4Vue}
   }
   

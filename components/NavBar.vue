@@ -8,9 +8,10 @@
           <div class="header-wrapper">
             <div class="header-left">
               <a href="/" class="logo">
-                <button
+                <img
                   loading="lazy"
-                  src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/10/31/137ac835-153e-4420-93a0-23b04851c260.svg"                  alt="Super Step"
+                  src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/10/31/137ac835-153e-4420-93a0-23b04851c260.svg"             
+                  alt="Super Step"
                   width="200"
                 />
               </a>
@@ -283,14 +284,16 @@
                     />
                   </a>
                 </li>
-                <a href="/LoginPage" class="menu-link">
-                    <img
-                      loading="lazy"
-                      class="icon-favorite-svg"
-                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/user.svg"
-                      height="24px"
-                    />
-                  </a>
+                <router-link to="/login" @click="redirectToLogin">
+                  <li class="menu-list-item">
+                    <a class="menu-link">
+                      <img loading="lazy" class="icon-favorite-svg"
+                        src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/user.svg"
+                        height="24px"
+                        alt="User">
+                    </a>
+                  </li>
+                </router-link>
                 <li class="menu-list-item">
                   <a href="/favorites" class="menu-link">
                     <img
@@ -365,9 +368,10 @@
           this.slideIn = true;
         }, 500); 
       },
-      goToLoginPage() {
-        this.$router.push('/login');
-      },
+      redirectToLogin() {
+    this.$router.push("/login");
+  }
+      
     },
   };
   </script>
@@ -394,6 +398,8 @@
     display: flex;
     gap: 20px;
   }
+  
+ 
 
   .menu-list-item:hover .dropdown {
     display: flex;
@@ -558,7 +564,7 @@
   }
   
   .header-left .logo {
-      margin: 0;
+      margin:0;
       padding: 0;
       border: 0;
   }

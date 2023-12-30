@@ -2,22 +2,20 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Vue from "vue";
 import VueRouter from "vue-router";
-import LoginPage from "~/pages/LoginPage"
-import HomePage from "@/pages/HomePage"
+import HomePage from "@/pages/HomePage.vue";
+import LoginPage from "@/pages/LoginPage.vue"; 
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-export const router = new VueRouter({
+const routes = [
+  { path: "/", name: "home", component: HomePage },
+  { path: "/login", name: "login", component: LoginPage },
+  { path: "/:catchAll(.*)", name: "notFound", component: HomePage },
+];
 
-    routes : [
-        {path : "/",
-        name :home,
-        component:HomePage},
-        {path : "/login",
-        name:login,
-        component:LoginPage},
-        {path : "*",
-        component:HomePage},
-    ]
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes,
+});
 
-})
+export default router;

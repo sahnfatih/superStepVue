@@ -30,7 +30,7 @@ import OneCikanlarSliderVue from '../components/OneCikanlarSlider.vue';
 import Container4Vue from '../components/Container4.vue'
 import GiyimKoleksiyonuSliderVue from '../components/GiyimKoleksiyonuSlider.vue';
 export default {
-    name: "IndexPage",
+    name: "home",
     components: { Navbar, SezonunTrendleriVue, ContainerVue, KoleksiyonlarVue, Container2Vue, FooterVue, SliderVue, Container3Vue, Footer2Vue, FavoriModellerSliderVue, OneCikanlarSliderVue, Container4Vue, GiyimKoleksiyonuSliderVue, loginVue }
 }
 </script>

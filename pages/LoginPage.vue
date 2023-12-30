@@ -4,13 +4,15 @@
         <loginVue />
         <Footer2Vue />
     </div>
-</template> 
+</template>
+
+
 <script>
 import Footer2Vue from '~/components/Footer2.vue'
 import NavBar from '~/components/NavBar.vue';
 import LoginVue from '~/components/Login.vue';
 export default {
-    name: "login",
+    name: "LoginPage",
     components: { NavBar, Footer2Vue, LoginVue }
 }
 </script>
