@@ -6,7 +6,7 @@
                 <p> SuperStep haberlerinden ve etkinliklerinden haberdar olmak için üye ol.</p>
                 <div class="input-wrapper">
                     <input type="email" class="subscribe-input">
-                    <button type="button" class="subscribe-button" style="color:aliceblue"> ÜYE OL</button>
+                    <button  @click="redirectToLoginPage" type="button" class="subscribe-button" style="color:aliceblue"> ÜYE OL</button>
                 </div>
             </div>
         </div>
@@ -77,15 +77,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="menu-bottom">
-              <div class="footer-inner-country">
-                 Alışveriş yaptığınız ülke: 
-                 <img src="https://cdn-ss.akinon.net/static_omnishop/super501/assets/img/turkey-flag.png" style="display: inline-block;" height="11px" width="16px" alt="">
-                 <a href="" style="display: inline-block; position: relative;" > Değiştir</a>
-
-              </div>
-         </div>   -->
-
+                 
                 <div class="item-right">
                     <div class="app-download">
                         <div style="margin-bottom: 5px; font-size: 14px; font-weight: 300; "> UYGULAMANIZI İNDİRİN
@@ -127,6 +119,15 @@
         </div>
     </footer>
 </template>
+<script>
+export default {
+  methods: {
+    redirectToLoginPage() {
+      this.$router.push('/login');
+    },
+  },
+};
+</script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500&display=swap');
 

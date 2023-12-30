@@ -1,16 +1,7 @@
 <template>
       <div>
-        <Navbar />
-        <ContainerVue />
-        <Container2Vue />
-        <SezonunTrendleriVue/>
-        <Container4Vue />
-        <KoleksiyonlarVue />
-        <FavoriModellerSliderVue />
-        <Container3Vue />
-        <FooterVue />
-        <Footer2Vue />    
-    </div>
+        <router-view/>
+      </div>
   </template> 
   <script>
   import Navbar from '../components/NavBar.vue';
@@ -23,10 +14,18 @@
   import Footer2Vue from '../components/Footer2.vue'
   import FavoriModellerSliderVue from '../components/FavoriModellerSlider.vue';
   import Container4Vue from '../components/Container4.vue'
+  import LoginPage from '~/pages/LoginPage.vue';
   export default {
     name: "DefaultLayout",
-    components: { Navbar, SezonunTrendleriVue, ContainerVue, KoleksiyonlarVue, Container2Vue, FooterVue, Container3Vue, Footer2Vue, FavoriModellerSliderVue, Container4Vue}
-  }
+    components: {Navbar, SezonunTrendleriVue, ContainerVue,
+       KoleksiyonlarVue, Container2Vue,
+       FooterVue, Container3Vue, Footer2Vue,
+        FavoriModellerSliderVue, Container4Vue},
+         
+       
+}
+  
+  
   
   
   </script>

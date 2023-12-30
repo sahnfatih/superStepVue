@@ -284,16 +284,18 @@
                     />
                   </a>
                 </li>
-                <router-link to="/login" @click="redirectToLogin">
-                  <li class="menu-list-item">
-                    <a class="menu-link">
-                      <img loading="lazy" class="icon-favorite-svg"
-                        src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/user.svg"
-                        height="24px"
-                        alt="User">
-                    </a>
-                  </li>
-                </router-link>
+                <div class="user-icon" @click="togglePopup">
+                  <img loading="lazy" class="icon-favorite-svg"
+                    src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/user.svg"
+                    height="24px"
+                    alt="User">
+              
+                  <div v-if="popupVisible" class="popup-content" @click.stop>
+                    <router-link to="/login">
+                      <p>Giriş Yap / Üye Ol</p>
+                    </router-link>
+                  </div>
+                </div>
                 <li class="menu-list-item">
                   <a href="/favorites" class="menu-link">
                     <img
@@ -336,12 +338,14 @@
         currentNotificationIndex: 0,
         slideIn: false,
         isCartMenuOpen: false,
+        popupVisible: false,
         isDropdownVisible:{
             markalar: false,
              erkek: false,
             kadin: false,
             cocuk: false,
             giyim: false
+            
         }
       };
     },
@@ -368,12 +372,24 @@
           this.slideIn = true;
         }, 500); 
       },
-      redirectToLogin() {
-    this.$router.push("/login");
-  }
       
+      togglePopup() {
+      this.popupVisible = !this.popupVisible;
     },
-  };
+    closePopupOnClickOutside(event) {
+      if (!this.$el.contains(event.target)) {
+        this.popupVisible = false;
+      }
+    }
+  },
+  mounted() {
+    document.addEventListener('click', this.closePopupOnClickOutside);
+  },
+  beforeDestroy() {
+    document.removeEventListener('click', this.closePopupOnClickOutside);
+  }
+     
+    }
   </script>
   
   
@@ -399,7 +415,29 @@
     gap: 20px;
   }
   
- 
+  .user-icon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 2; 
+    width: 150px; 
+  }
+  
+  .popup-content p {
+    cursor: pointer; 
+  }
+  
+  .user-icon:hover .popup-content {
+    display: block;
+  }
 
   .menu-list-item:hover .dropdown {
     display: flex;
