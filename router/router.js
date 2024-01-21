@@ -4,9 +4,9 @@ import HomePage from "@/pages/HomePage.vue";
 import LoginPage from "@/pages/LoginPage.vue"; 
 
 const routes = [
-  { path: "/", name: "home", pages: HomePage },
-  { path: "/login", name: "LoginPage", pages: LoginPage },
-  { path: "/:catchAll(.*)", name: "notFound", pages: HomePage },
+  { path: "/", name: "home", component: HomePage },
+  { path: "/login", name: "LoginPage", component: LoginPage },
+  { path: "/:catchAll(.*)", name: "notFound", component: HomePage },
 ];
 
 const router = createRouter({

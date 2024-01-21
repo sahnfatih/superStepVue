@@ -1,5 +1,29 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+ 
+ 
+ router:{
+  mode: "history",
+  routes: [{
+    path: "/",
+    name: "home",
+    component: "HomePage",
+  },
+  {
+    path: "/login",
+    name: "LoginPage",
+    component: "LoginPage",
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "notFound",
+    component: "HomePage",
+  },
+]
+ },
+ 
+ 
+ 
   head: {
     title: 'superstep',
     htmlAttrs: {
@@ -19,16 +43,7 @@ export default {
   proxy: {
     '/cms': 'https://akn-ss.a-cdn.akinoncloud.com',
   },
-  generate: {
-    routes: [
-      '/',
-      '/login',
-    ],
-  },
- router:{
-  middleware: "router",
-  base: "/",
- },
+
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
