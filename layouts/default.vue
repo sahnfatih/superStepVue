@@ -15,15 +15,13 @@
   import Footer2Vue from '../components/Footer2.vue'
   import FavoriModellerSliderVue from '../components/FavoriModellerSlider.vue';
   import Container4Vue from '../components/Container4.vue'
-  import LoginPageVue from '~/pages/LoginPage.vue';
-  import FavoriPage from '~/pages/FavoriPage.vue';
 
   export default {
     name: "DefaultLayout",
-    components: {FavoriPage, Navbar, SezonunTrendleriVue, ContainerVue,
+    components: { Navbar, SezonunTrendleriVue, ContainerVue,
     KoleksiyonlarVue, Container2Vue,
     FooterVue, Container3Vue, Footer2Vue,
-    FavoriModellerSliderVue, Container4Vue, LoginPageVue, FavoriPage },
+    FavoriModellerSliderVue, Container4Vue, },
          
        
 }

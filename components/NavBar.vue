@@ -275,13 +275,13 @@
             <div class="header-right">
               <ul class="menu-list">
                 <li class="menu-list-item">
-                  <a href="/search" class="menu-link">
+                  <nuxt-link to="/search" class="menu-link">
                     <img
                       loading="lazy"
                       class="icon-favorite-svg"
                       src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super734/assets/img/header-icons/search.svg"                       height="24px"
                     />
-                  </a>
+                  </nuxt-link>
                 </li>
                 <div class="user-icon" @click="togglePopup">
                   <img loading="lazy" class="icon-favorite-svg"
