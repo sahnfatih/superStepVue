@@ -279,15 +279,13 @@
                     <img
                       loading="lazy"
                       class="icon-favorite-svg"
-                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/search.svg"                   
-                       height="24px"
+                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super734/assets/img/header-icons/search.svg"                       height="24px"
                     />
                   </a>
                 </li>
                 <div class="user-icon" @click="togglePopup">
                   <img loading="lazy" class="icon-favorite-svg"
-                    src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/user.svg"
-                    height="24px"
+                  src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super734/assets/img/header-icons/user.svg"                    height="24px"
                     alt="User">
               
                   <div v-if="popupVisible" class="popup-content" @click.stop>
@@ -301,8 +299,7 @@
                     <img
                       loading="lazy"
                       class="icon-favorite-svg"
-                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/heart.svg"                   
-                       height="24px"
+                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super734/assets/img/header-icons/heart.svg"                       height="24px"
                     />
                   </a>
                 </li>
@@ -311,8 +308,7 @@
                     <img
                       loading="lazy"
                       class="icon-favorite-svg"
-                       src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super715/assets/img/header-icons/bag.svg"                    height="24px"
-                    />
+                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super734/assets/img/header-icons/bag.svg"                    />
                   </a>
                 </li>
               </ul>
