@@ -1,26 +1,16 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
- 
- 
- router:{
-  mode: "history",
-  routes: [{
-    path: "/",
-    name: "home",
-    component: "HomePage",
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/login',
+        name: 'login',
+        component: resolve(__dirname, 'pages/LoginPage.vue'),
+      });
+    },
   },
-  {
-    path: "/login",
-    name: "LoginPage",
-    component: "LoginPage",
-  },
-  {
-    path: "/:catchAll(.*)",
-    name: "notFound",
-    component: "HomePage",
-  },
-]
- },
+  
+
  
  
  

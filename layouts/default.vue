@@ -1,7 +1,7 @@
 <template>
       <div>
+    
         <router-view/>
-        <LoginPageVue/>
       </div>
   </template> 
   <script>
@@ -16,13 +16,14 @@
   import FavoriModellerSliderVue from '../components/FavoriModellerSlider.vue';
   import Container4Vue from '../components/Container4.vue'
   import LoginPageVue from '~/pages/LoginPage.vue';
+  import FavoriPage from '~/pages/FavoriPage.vue';
 
   export default {
     name: "DefaultLayout",
-    components: { Navbar, SezonunTrendleriVue, ContainerVue,
+    components: {FavoriPage, Navbar, SezonunTrendleriVue, ContainerVue,
     KoleksiyonlarVue, Container2Vue,
     FooterVue, Container3Vue, Footer2Vue,
-    FavoriModellerSliderVue, Container4Vue, LoginPageVue },
+    FavoriModellerSliderVue, Container4Vue, LoginPageVue, FavoriPage },
          
        
 }

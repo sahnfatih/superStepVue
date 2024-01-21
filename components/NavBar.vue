@@ -295,13 +295,14 @@
                   </div>
                 </div>
                 <li class="menu-list-item">
-                  <a href="/favorites" class="menu-link">
+                  <nuxt-link to="/favori" class="menu-link">
                     <img
                       loading="lazy"
                       class="icon-favorite-svg"
-                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super734/assets/img/header-icons/heart.svg"                       height="24px"
+                      src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super734/assets/img/header-icons/heart.svg"
+                      height="24px"
                     />
-                  </a>
+                  </nuxt-link>
                 </li>
                 <li class="menu-list-item">
                   <a href="/cart" class="menu-link">

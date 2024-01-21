@@ -15,7 +15,7 @@ import NavBar from '~/components/NavBar.vue';
 import LoginVue from '~/components/Login.vue';
 
 export default {
-    name: "LoginPage",
+    layout: 'default',
     components: { LoginVue, NavBar, Footer2Vue}
 }
 </script>
