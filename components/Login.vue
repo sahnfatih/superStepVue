@@ -1,6 +1,7 @@
 
-import type { Login } from '#build/components';
+
 <template>
+    
     <div class="auth auth-register">
         <div>
             <div class="container">
@@ -14,19 +15,20 @@ import type { Login } from '#build/components';
                             <div class="login-container">
                                 <div class="form-container">
                                     <h1 class="login-header hidden-xs"> Üye Girişi</h1>
-                                    <form class="js-account-form" method="post" @submit.prevent="login">
+                                    <form class="js-account-form" >
                                         <input type="hidden" name="csrfmiddlewaretoken"
                                             value="V9vQSjfof75B2o2HMoeV0WLReBmGhi3TeUU1flqb5zBlNc1h7dy2SsYm9Otgrxp0">
-                                        <div class="auth__form__input-box auth__form__input-box--register">
+                                        <div 
+                                        class="auth__form__input-box auth__form__input-box--register">
                                             <label class="form-label">Eposta adresiniz</label>
-                                            <input type="text" name="email" v-model="email"
+                                            <input type="text" name="email" 
                                                 class="auth__form__input auth__form__input--register" placeholder="">
                                         </div>
                                         <div class="error auth__form__error js-error-email" style="display: none;">
                                         </div>
                                         <div class="auth__form__input-box auth__form__input-box--register">
                                             <label class="form-label">Şifreniz</label>
-                                            <input type="password" name="password" v-model="password"
+                                            <input type="password" name="password" 
                                                 class="auth__form__input auth__form__input--register" placeholder="">
                                         </div>
                                         <div class="error auth__form__error js-error-password" style="display: none;">
@@ -720,34 +722,8 @@ import type { Login } from '#build/components';
     </div>
 </template>
 
-<script> 
-import {auth} from '@/firebase'
-
-export default{
-    data() {
-        return{
-            email:'',
-            password:'',
-        };
-    },
-    methods:{
-        async login() {
-            try{
-                const userCredential = await auth.signInWithEmailAndPassword(this.email, this.password);
-
-                console.log('Giriş Başarılı', userCredential.user);
-                
-            }
-            catch(error){
-                console.error('Giriş Başarısız', error.message);
-            }
-        },
-    },
-
-}
 
 
-</script>
 
 
 
