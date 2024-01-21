@@ -289,7 +289,7 @@
                     alt="User">
               
                   <div v-if="popupVisible" class="popup-content" @click.stop>
-                    <router-link to="/login">
+                    <router-link to="/indirim">
                       <p>Giriş Yap / Üye Ol</p>
                     </router-link>
                   </div>
