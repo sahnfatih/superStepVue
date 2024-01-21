@@ -305,12 +305,12 @@
                   </nuxt-link>
                 </li>
                 <li class="menu-list-item">
-                  <a href="/cart" class="menu-link">
+                  <nuxt-link to="/cart" class="menu-link">
                     <img
                       loading="lazy"
                       class="icon-favorite-svg"
                       src="https://688268d7.cdn.akinoncloud.com/static_omnishop/super734/assets/img/header-icons/bag.svg"                    />
-                  </a>
+                  </nuxt-link>
                 </li>
               </ul>
             </div>

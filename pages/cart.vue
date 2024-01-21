@@ -1,6 +1,7 @@
 <template>
     <div>
         <NavBar/>
+        <Sepet/>
         <Footer2Vue />
         
     </div>
@@ -11,8 +12,9 @@
 <script>
 import Footer2Vue from '~/components/Footer2.vue'
 import NavBar from '~/components/NavBar.vue';
+import Sepet from '~/components/Sepet.vue';
 
 export default {
-    components: { NavBar, Footer2Vue}
+    components: { Sepet,NavBar, Footer2Vue}
 }
 </script>
