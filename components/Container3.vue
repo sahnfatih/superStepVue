@@ -14,7 +14,7 @@
             <div>
               <a href="https://www.superstep.com.tr/superkids/">
                 <img loading="lazy"
-              src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/09/22/314dabaa-6cb9-4c66-be81-48d13f858100.jpg"                  >
+                src="https://akn-ss.a-cdn.akinoncloud.com/cms/2024/01/17/5c7d8a73-8c77-4f0e-addd-f089c8f43c44.jpg"                  >
               </a>
             </div>
           </div>

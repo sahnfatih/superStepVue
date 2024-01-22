@@ -26,3 +26,7 @@ export default {
     components: { NavBar, SezonunTrendleriVue, ContainerVue, KoleksiyonlarVue, Container2Vue, FooterVue, Container3Vue, Footer2Vue, FavoriModellerSliderVue}
 }
 </script>
+
+
+
+

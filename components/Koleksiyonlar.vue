@@ -4,7 +4,7 @@
         <div class="home-quadr">
             <div class="row">
                 <a href="https://www.superstep.com.tr/vans/">
-                    <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/12/19/091fd0d0-f7ce-4321-9653-e0cd7cda8bba.jpg" alt="">
+                    <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2024/01/10/544a53f6-eefe-4167-9e05-d61f09a6bbb8.jpg" alt="">
                 </a>
                 <h4>Vans</h4>
                 <p>Kuralları yok et, authentic yaşa</p>
@@ -13,7 +13,7 @@
             </div>
             <div class="colection">
                 <a href="https://www.superstep.com.tr/adidas/">
-                    <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/12/19/9f964693-7fb6-42c8-b1d4-6d438d91197c.jpg"
+                    <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2024/01/10/e027bc32-6f90-47ea-aec0-2dae7ef67784.jpg"
                         alt="">
                 </a>
                 <h4>Adidas</h4>
@@ -23,7 +23,7 @@
             </div>
             <div class="colection">
                 <a href="https://www.superstep.com.tr/timberland/">
-                    <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/12/19/4bddb52e-547f-4446-872b-82a0bbf22546.jpg" alt="">
+                    <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2024/01/10/611a08b1-ea26-4751-895f-6585847afd2f.jpg" alt="">
                 </a>
                 <h4>Timberland</h4>
                 <p>Soğukta cesur kal!</p>
@@ -32,7 +32,7 @@
             </div>
             <div class="colection">
                 <a href="https://www.superstep.com.tr/nike/">
-                    <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/12/19/f474299e-a777-482f-b7ca-0650e5cd82a0.jpg" alt="">
+                    <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2024/01/10/fc878883-c642-4daa-a156-f47ea77e2bf8.jpg" alt="">
                 </a>
                 <h4>Nike</h4>
                 <p>Eşsiz adımlar atmanın keyfini çıkar</p>

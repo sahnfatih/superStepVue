@@ -4,7 +4,7 @@
         <div class="image">
             <a href="https://www.superstep.com.tr/ugg-australia/">
                 <img loading="lazy" class="hidden-sm hidden-xs"
-                src="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/12/19/f5de2781-6705-41a5-a27f-68c500675997.jpg"                    width="1950px">
+                src="https://akn-ss.a-cdn.akinoncloud.com/cms/2024/01/18/b8d63138-9acb-4c04-a6bb-1f34133aa82d.jpg"                   width="1950px">
             </a>
         </div>
     </div>

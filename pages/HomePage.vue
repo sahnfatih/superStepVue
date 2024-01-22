@@ -1,8 +1,8 @@
 <template>
     <div>
         <NavBar/>
-        <SezonunTrendleriVue />
         <ContainerVue />
+        <SezonunTrendleriVue />
         <KoleksiyonlarVue />
         <FavoriModellerSliderVue />
         <Container2Vue />

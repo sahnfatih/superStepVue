@@ -351,9 +351,10 @@
     },
     methods: {
       setupNotificationTimer() {
-        setInterval(() => {
-          this.showNextNotification();
-        }, 3000); 
+    this.showNextNotification(); 
+    setInterval(() => {
+      this.showNextNotification();
+    }, 3500); 
       },
       showDropdown(menu) {
       this.isDropdownVisible[menu] = true;
@@ -361,14 +362,14 @@
     hideDropdown(menu) {
       this.isDropdownVisible[menu] = false;
     },
-      showNextNotification() {
-        this.slideIn = false;
-        setTimeout(() => {
-          this.currentNotificationIndex = (this.currentNotificationIndex + 1) % this.notifications.length;
-          this.notificationText = this.notifications[this.currentNotificationIndex];
-          this.slideIn = true;
-        }, 500); 
-      },
+    showNextNotification() {
+    this.slideIn = false;
+    setTimeout(() => {
+      this.currentNotificationIndex = (this.currentNotificationIndex + 1) % this.notifications.length;
+      this.notificationText = this.notifications[this.currentNotificationIndex];
+      this.slideIn = true;
+    }, 500); 
+  },
       
       togglePopup() {
       this.popupVisible = !this.popupVisible;
