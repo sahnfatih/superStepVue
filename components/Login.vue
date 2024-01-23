@@ -4,92 +4,17 @@
         <div class="container">
           <div class="row">
             <div class="auth-tabs visible-xs">
-              <span class="auth-tab-item js-auth-tab active" data-class=".js-login-content">Üye Girişi</span>
-              <span class="auth-tab-item js-auth-tab" data-class=".js-signup-content">Üye Ol</span>
+               
+               <div class="col-sm-6 auth-tab-content js-auth-content js-signup-content">
+                <div class="form-container register-container">
+                <h1  class="login-header hidden-xs">Üye Girişi</h1>
+                <p><input  class="auth__form__input regex-control" type="text" placeholder="Email" v-model="email"></p>
+                <p><input  class="auth__form__input regex-control" type="password" placeholder="Password" v-model="password"></p>
+                <p><button class="auth__form__submit button" @click="register">GİRİş</button></p>
+                <p><button class="auth__form__submit button"  @click="signInWithGoogle">Google </button></p>
             </div>
-            <div class="auth-contents">
-              <div class="col-sm-6 auth-tab-content js-auth-content js-login-content active">
-                <div class="login-container">
-                  <div class="form-container">
-                    <h1 class="login-header hidden-xs"> Üye Girişi</h1>
-                    <form class="js-account-form" method="post" >
-                      <input type='hidden' name='csrfmiddlewaretoken' value='pGyB7cR6WawdwdOuU79SuXd7A59jwcBQKNkIvtuEiFmZ6GUQX6Yd3XKPE1i7KQta' />
-                      <div class="auth__form__input-box auth__form__input-box--register">
-                        <label class="form-label">Eposta adresiniz</label>
-                        <input
-                          type="text"
-                          name="email"
-                          class="auth__form__input auth__form__input--register"
-                          placeholder="Email"
-                          v-model="email"
-                          >
-                      </div>
-                      <div class="error auth__form__error js-error-email"></div>
-  
-                      <div class="auth__form__input-box auth__form__input-box--register">
-                        <label class="form-label">Şifreniz</label>
-                        <input
-                          type="password"
-                          name="password"
-                          class="auth__form__input auth__form__input--register"
-                          placeholder="Password"
-                          v-model="password"
-                          >
-                      </div>
-                      <div class="error auth__form__error js-error-password"></div>
-                      <div class="error auth__form__error js-error-non_field_errors"></div>
-  
-                      <input type="hidden" name="next" value="/baskets/basket/">
-                      <div class="clear"></div>
-  
-                      <div class="auth__form__input-box auth__form__input-box--text button_line_style">
-                        <a href="/forgot-password/" class="auth__form__forget">
-                          Şifremi unuttum
-                        </a>
-                      </div>
-  
-                      <div class="auth__form__input-box auth__form__input-box--register auth__form__input-box--register-button">
-                        <button type="submit" class="auth__form__submit button" @click="register">
-                          Giriş Yap
-                        </button>
-                      </div>
-  
-                      <div class="auth__form__input-box auth__form__input-box--register auth__form__input-box--register-button">
-                        <a class="auth__form__submit button button--disabled js-akifast-login-button akifast-login-button" href="/akifast/login/">
-                          <div class="belt">
-                            <div class="belt__button"></div>
-                          </div>
-                          <span>Hızlı Giriş</span>
-                        </a>
-                      </div>
-  
-                      <div class="akifast-agreements">
-                        <div class="auth-form__checklist">
-                          <p><strong>Hızlı Giriş:</strong> Akifast ile giriş yapmadan önce sözleşmeleri onaylamanız gerekmektedir.</p>
-                          <div>
-                            <label class="auth-form__check">
-                              <input class="js-akifast-lighting-text-input" type="checkbox" name="akifastconfirm" value="true">
-                              Üyelik Formu <a href="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/08/11/5cba0d27-04e3-460a-a7bb-33a8f2ff11d6.pdf" class="underline js-pdf-view">Aydınlatma Metni</a>’ni okudum
-                            </label>
-                          </div>
-                          <div>
-                            <label class="auth-form__check">
-                              <input class="js-akifast-user-agreement-input" type="checkbox" name="akifastconfirm" value="true">
-                              <a href="https://akn-ss.a-cdn.akinoncloud.com/cms/2023/08/23/6b1071cf-0a44-47dd-bf23-8c0d9772ffa4.pdf" class="underline js-pdf-view">Kullanıcı Sözleşmesi</a>'ni okudum, kabul ediyorum
-                            </label>
-                          </div>
-                          <div>
-                            <label class="auth-form__check">
-                              <input class="js-allowed_email" type="checkbox" name="email_allowed" value="true">
-                              Tarafıma ticari elektronik ileti gönderilmesine ve bu kapsamda verilerimin işlenmesine <a href="https://akn-ss.a-cdn.akinoncloud.com/cms/2022/01/31/bec7ef95-95ce-4335-8442-a7b708cbcd8d.pdf" class="underline js-pdf-view">açık rıza</a> veriyorum.
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
+        </div>
+            
               <div class="col-sm-6 auth-tab-content js-auth-content js-signup-content">
                 <div class="form-container register-container">
                   <div class="clear"></div>
@@ -729,7 +654,8 @@
 <script setup>
 
 import { ref } from 'vue';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword,
+GoogleAuthProvider,signInWithPopup,} from 'firebase/auth';
 import { useRouter } from 'vue-router';
 import { inject } from 'vue';
 const email = ref('');
@@ -746,6 +672,22 @@ const register = async () => {
     console.error('Kayıt Hatası:', error.message);
     alert(error.message);
   }
+};
+
+const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(getAuth(), provider)
+    .then((result) => {
+        console.log(result.user);
+        router.push("/cart");
+
+    })
+    .catch((error) => {
+        
+
+    });
+
+
 };
 
 
@@ -770,32 +712,31 @@ const register = async () => {
 }
 
 
+  .auth-tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .auth-tabs > div {
+    width: 48%; 
+  }
+
+  .auth-tab-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 80%; 
+    margin: auto;
+  }
 
 
 
-.datepicker table tr td.today.active:hover {
-    color: #fff
-}
 
-.datepicker table tr td.active,.datepicker table tr td.active.disabled,.datepicker table tr td.active.disabled:hover,.datepicker table tr td.active:hover {
-    background-color: #006dcc;
-    background-image: linear-gradient(180deg,#08c,#04c);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c",endColorstr="#0044cc",GradientType=0);
-    border-color: #04c #04c #002a80;
-    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-    color: #fff;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.25)
-}
 
-.datepicker table tr td.active.active,.datepicker table tr td.active.disabled,.datepicker table tr td.active.disabled.active,.datepicker table tr td.active.disabled.disabled,.datepicker table tr td.active.disabled:active,.datepicker table tr td.active.disabled:hover,.datepicker table tr td.active.disabled:hover.active,.datepicker table tr td.active.disabled:hover.disabled,.datepicker table tr td.active.disabled:hover:active,.datepicker table tr td.active.disabled:hover:hover,.datepicker table tr td.active.disabled:hover[disabled],.datepicker table tr td.active.disabled[disabled],.datepicker table tr td.active:active,.datepicker table tr td.active:hover,.datepicker table tr td.active:hover.active,.datepicker table tr td.active:hover.disabled,.datepicker table tr td.active:hover:active,.datepicker table tr td.active:hover:hover,.datepicker table tr td.active:hover[disabled],.datepicker table tr td.active[disabled] {
-    background-color: #04c
-}
 
-.datepicker table tr td.active.active,.datepicker table tr td.active.disabled.active,.datepicker table tr td.active.disabled:active,.datepicker table tr td.active.disabled:hover.active,.datepicker table tr td.active.disabled:hover:active,.datepicker table tr td.active:active,.datepicker table tr td.active:hover.active,.datepicker table tr td.active:hover:active {
-    background-color: white
-}
 
 
 

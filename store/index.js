@@ -1,4 +1,4 @@
-/*import { createPinia } from 'pinia';
+import { createPinia } from 'pinia';
 
 const pinia = createPinia();
 
@@ -18,4 +18,4 @@ export const useAuthStore = pinia.store('auth', {
   },
 });
 
-export { pinia };*/
+export { pinia };

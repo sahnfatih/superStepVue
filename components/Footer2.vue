@@ -123,7 +123,7 @@
 export default {
   methods: {
     redirectToLoginPage() {
-      this.$router.push('/login');
+      this.$router.push('/indirim');
     },
   },
 };
