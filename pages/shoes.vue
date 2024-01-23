@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar/>
-        <Fav/>
+        <Ayakkabi/>
         <Footer2Vue />
         
     </div>
@@ -12,10 +12,9 @@
 <script>
 import Footer2Vue from '~/components/Footer2.vue'
 import NavBar from '~/components/NavBar.vue';
-import Fav from '~/components/Fav.vue';
+import Ayakkabi from '~/components/Ayakkabi.vue';
 
 export default {
-    layout: 'default',
-    components: { Fav, NavBar, Footer2Vue}
+    components: { Ayakkabi,NavBar, Footer2Vue}
 }
 </script>

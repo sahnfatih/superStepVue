@@ -2,7 +2,7 @@
     <div class="row-sezonun-trendleri">
         <h3> Sezonun Trendleri </h3>
         <div class=" imgcontainer">
-            <a href="/gorsel">
+            <a href="/shoes">
                 <img src="https://akn-ss.a-cdn.akinoncloud.com/cms/2024/01/09/eb02a0dd-9910-46bb-a4a1-ad45124f19f0.jpg">
                 <span>New Balance</span>
             </a>
