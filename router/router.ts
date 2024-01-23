@@ -6,6 +6,7 @@ import indirimVue from "~/pages/indirim.vue";
 import cartVue from "~/pages/cart.vue";
 import uyeVue from "~/pages/uye.vue";
 
+
 const routes = [
   { path: "/", name: "home", component: HomePage },
   { path: "/login", name: "LoginPage", component:LoginPage},
