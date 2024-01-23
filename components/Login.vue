@@ -657,7 +657,10 @@ import { ref } from 'vue';
 import { getAuth, createUserWithEmailAndPassword,
 GoogleAuthProvider,signInWithPopup,} from 'firebase/auth';
 import { useRouter } from 'vue-router';
-import { inject } from 'vue';
+import { useStore } from 'vuex';
+ 
+
+const store = useStore();
 const email = ref('');
 const password = ref('');
 const router = useRouter();
@@ -667,7 +670,7 @@ const register = async () => {
     // Firebase'e kayıt ol
     await createUserWithEmailAndPassword(getAuth(), email.value, password.value);
     console.log('Başarıyla kayıt oldunuz.');
-    router.push('/cart');
+    router.push('/uye');
   } catch (error) {
     console.error('Kayıt Hatası:', error.message);
     alert(error.message);
@@ -679,7 +682,8 @@ const signInWithGoogle = () => {
     signInWithPopup(getAuth(), provider)
     .then((result) => {
         console.log(result.user);
-        router.push("/cart");
+        router.push("/uye");
+        
 
     })
     .catch((error) => {

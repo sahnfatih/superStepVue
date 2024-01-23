@@ -61,6 +61,7 @@ export default {
   buildModules: [
     '@nuxt/router',
     '@nuxt/firebase',
+    "@nuxtjs/vuex",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import store from './store';
 
 // Import the functions you need from the SDKs you need
 import { getAnalytics } from "firebase/analytics";
@@ -47,11 +48,10 @@ const router = createRouter({
   routes: [],
 });
 
-// Vue app oluştur
+const firebaseApp = initializeApp(firebaseConfig);
+
 const app = createApp(App);
-
-// Router ve Firebase'i kullan
-app.use(router);
-
-// App'i mount et
+app.use(store);
+app.config.globalProperties.$auth = getAuth(firebaseApp);
+app.config.globalProperties.$db = getFirestore(firebaseApp);
 app.mount('#app');
