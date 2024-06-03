@@ -1,3 +1,7 @@
+![image](https://github.com/sahnfatih/superStepVue/assets/82958318/cc972303-423a-481d-acf0-0b7433d7d37c)
+![image](https://github.com/sahnfatih/superStepVue/assets/82958318/0fceb71e-52fe-4b4a-9482-5e257cb4214d)
+
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
